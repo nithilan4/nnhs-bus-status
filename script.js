@@ -72,7 +72,6 @@ function setTable(data) {
 		}
 		else if (j < 4 * (list.length / 3.72)) {
 			row = rowList[m];
-			console.log(m)
 			cellBusNumber = row.insertCell(6);
 			cellBusStatus = row.insertCell(7);
 			j++
@@ -81,8 +80,9 @@ function setTable(data) {
 		var row = (data[x])
 		// Add some text to the new cells:
 		cellBusNumber.innerHTML = row["Bus"].bold();
+    console.log(cellBusNumber)
 		if (row["Change"] != "") {
-			cellBusNumber.innerHTML = x + " = " + row["Change"].bold();
+			cellBusNumber.innerHTML = row["Bus"] + " = " + row["Change"].bold();
 		}
 
 		if (row["Status"] == "LOADING") {
