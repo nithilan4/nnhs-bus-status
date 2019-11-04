@@ -86,7 +86,7 @@ function setTable(data) {
 		}
 
 		if (row["Status"] == "LOADING") {
-			cellBusStatus.innerHTML = row["Status"].fontcolor("green").bold();
+			cellBusStatus.innerHTML = row["Status"].fontcolor("limegreen").bold();
 			cellBusStatus.style.padding = "1.4vw";
 		}
 		else if (row["Status"] == "HERE") {
